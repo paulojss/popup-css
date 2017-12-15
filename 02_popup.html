@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+https://pt.stackoverflow.com/questions/56996/como-abrir-um-pop-up-sem-usar-javascript
+Este método não usa Javascript nem CSS3. Funciona basicamente assim: A página fica dentro de um container e a popup fica escondida numa parte overflow do container. Quando você clica na âncora, o usuário é levado para essa parte do container.
+-->
+<html>
+	<head>
+	<style>
+	#container, #popup{
+	    width: 600px;
+	    height: 600px;
+	    overflow: hidden;
+	}
+	#pag{
+	    width: 600px;
+	    height: 1200px;
+	}
+	#popup{
+	    margin-top: 600px;
+	    background-color: grey
+	}
+	</style>
+
+	</head>
+
+	<body>
+	<div id="container">
+	    <div id="pag">
+		<a href="#popup">Abrir popup</a><p>
+		Conteúdo da pagina
+		<div id="popup">
+		    <a href="#pag">fechar popup</a><p>
+		    Conteúdo da POPUP
+		</div>
+	    </div>  
+	</div>
+	</body>
+</html>
