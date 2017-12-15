@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<!--
+https://pt.stackoverflow.com/questions/56996/como-abrir-um-pop-up-sem-usar-javascript
+-->
+<html>
+	<head>
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>  
+
+	<script language="JavaScript">
+	$(document).ready(function() {
+	$("#enviar").click(function( e ){
+	e.preventDefault();
+
+	var width = 550;
+	var height = 550;
+
+	var left = 99;
+	var top = 99;
+
+	window.open(enviar,'janela', 'width='+width+', height='+height+',top='+top+'left='+left+', scrollbars=yes, status=no, toolbar=no, location=no, directories=no, menubar=no, resizable=no, fullscreen=no');
+
+	 });
+	 });
+	</script>
+	</head>
+	<body>
+		<a href="https://twitter.com/share" id="enviar" data-text="https://www.google.com.br/?gws_rd=ssl">Tweet</a>
+	</body>
+</html>
